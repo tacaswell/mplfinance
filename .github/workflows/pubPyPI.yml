@@ -15,7 +15,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
-        ref:  ${{ github.event.inputs.tag }}
+        ref: ${{ github.event.inputs.tag }}
+        persist-credentials: false
 
     - name: Display Coded Version 
       #run: git show ${{ github.sha }}:src/mplfinance/_version.py
